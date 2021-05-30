@@ -9,6 +9,7 @@ import './App.css';
 import Cart from "./Components/Cart/Cart";
 import Navbar from "./Components/Navbar/Navbar";
 import Products from "./Components/Products/Products"
+import SingleItem from "./Components/SingleItem/SingleItem";
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
     <div className='container'>
     <Navbar></Navbar>
       <Switch>
-        <Route path="/cart">
+        <Route exact path="/cart">
         <Cart></Cart>
         </Route>
-        <Route path="/products">
-          
+        <Route exact path="/product/:id">
+          <SingleItem></SingleItem>
         </Route>
         <Route path="/">
          <Products></Products>
